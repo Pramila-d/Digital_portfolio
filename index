@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio - Krishnika D</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #f0f8ff, #e6e6fa);
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(to right, #87CEFA, #4682B4, #1E90FF);
+            color: white;
+            text-align: center;
+            padding: 2rem 0 4rem 0;
+            position: relative;
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-content p {
+            font-size: 1.2rem;
+        }
+
+        .profile-picture {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 4px solid white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        nav {
+            background-color: #4682B4;
+            text-align: center;
+            padding: 0.7rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #FFD700;
+        }
+
+        .section-content {
+            background: #E0FFFF;
+            padding: 2rem;
+            margin: 1rem auto;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: justify;
+        }
+
+        section:nth-child(even) .section-content {
+            background: #FAFAD2;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #2F4F4F;
+        }
+
+        .download-button {
+            background-color: #4682B4;
+            color: #fff;
+            padding: 0.5rem 1.2rem;
+            text-decoration: none;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .download-button:hover {
+            background-color: #5a9bd5;
+        }
+
+        footer {
+            background: linear-gradient(to right, #4682B4, #1E90FF, #4169E1);
+            text-align: center;
+            padding: 1rem 0;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        @media (max-width: 600px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+            .profile-picture {
+                width: 90px;
+                height: 90px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <img src="passport photo.jpg" alt="Your Profile Picture" class="profile-picture">
+            <h1>Krishnika D</h1>
+            <p>Front-End Developer & UI Enthusiast</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p>
+                I am an enthusiastic and detail-oriented fresher in web development, eager to launch my career 
+                in the IT industry. With a solid foundation in HTML, CSS, Java, and modern front-end design principles, 
+                I am passionate about creating clean, efficient, and user-friendly web applications.  
+                I am a quick learner, adaptable to new technologies, and motivated to contribute effectively to projects 
+                while growing my skills under the mentorship of experienced professionals. My goal is to deliver quality 
+                digital solutions that make a positive impact.
+            </p>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="section-content">
+            <h2>Education</h2>
+            <p><strong>Bharathiar University</strong> – Bachelor of Science in Computer Science (BSc CS)</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-content">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Java</li>
+                <li>JavaScript</li>
+                <li>Bootstrap</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-content">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="#">Digital Portfolio</a> – A personal portfolio website showcasing skills, education, and projects.</li>
+                <li><a href="#">Sample Driving App (Hackathon Competition)</a> – Participated in a coding competition to design a functional driving app prototype.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="resume">
+        <div class="section-content" style="text-align: center;">
+            <h2>Resume</h2>
+            <a href="file.pdf" target="_blank" class="download-button">Download CV</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Krishnika D | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 60,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
